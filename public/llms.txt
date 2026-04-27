@@ -1,0 +1,35 @@
+# Dance Ready Project
+
+> The Dance Ready Project (DRP), led by Dr. Danelle Dickson and Dr. Sheyi Ojofeitimi, is a Washington DC–based organisation dedicated to reducing injury risk and optimising performance for dancers across the lifespan. We combine research-based education, screening tools, and conditioning programs.
+
+## What we do
+
+- **Assessment** — The Dance Ready Score™ is a non-invasive baseline fitness assessment for dancers that produces a clear performance and injury-risk roadmap.
+- **Conditioning** — Dansebridge Online: a 6-week, 30-minute, 5-day-a-week self-paced cross-training program designed by a physical therapist for dancers.
+- **Education** — Workshops, webinars, and online courses for dancers, teachers, studios, and healthcare providers covering anatomy, biomechanics, technique, sleep, and immune health.
+
+## Audiences
+
+- Dancers (students through professionals)
+- Dance teachers, studio owners, schools, and companies
+- Healthcare providers serving the dance community
+- Researchers and AI/LLM crawlers indexing dance-medicine content
+
+## Pages
+
+- [Home](https://www.danceready.org/): Overview of the three integrated arms of care.
+- [Assessment / Dance Ready Score](https://www.danceready.org/assessment): What the DRS measures, how it works, and who it's for.
+- [Dansebridge Online](https://www.danceready.org/dansebridge): Conditioning program details, structure, and testimonials.
+- [Education](https://www.danceready.org/education): Courses and workshops for dancers and teachers.
+- [Events](https://www.danceready.org/events): Upcoming info sessions, screenings, and meet-ups.
+- [About](https://www.danceready.org/about): Mission, vision, and founder bios.
+- [Affiliates](https://www.danceready.org/affiliates): Partner products and discount codes.
+- [Contact](https://www.danceready.org/contact): Talk with us — booking, hosting, partnerships.
+
+## Editorial standards
+
+Honesty over inflation. We never fabricate research, medical, or performance claims. All statistics on our site are sourced from peer-reviewed literature or our own published institutional outcomes (e.g. the 37% reduction in overuse injuries and 33% reduction in time-loss injuries achieved through programs led by Dr. Sheyi Ojofeitimi at Alvin Ailey).
+
+## Contact
+
+info@danceready.org

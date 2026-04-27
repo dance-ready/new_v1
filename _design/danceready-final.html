@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dance Ready Project — Website Redesign</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--dk:#1C1C1A;--wh:#FDFCFA;--cr:#F7F4EF;--mi:#5C5B57;--ac:#C8472B;--al:#F0E8E5;--ro:#d4a8a0;--bd:rgba(28,28,26,0.12)}
+body{font-family:'DM Sans',Arial,sans-serif;background:var(--wh);color:var(--dk);line-height:1.65;overflow-x:hidden}
+.page{display:none}.page.on{display:block;animation:fi .22s ease}
+@keyframes fi{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+.nav{background:rgba(253,252,250,.96);border-bottom:1px solid var(--bd);height:60px;display:flex;align-items:center;padding:0 5%;position:sticky;top:0;z-index:99}
+.nav-in{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1200px;margin:0 auto}
+.logo{font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-weight:600;color:var(--dk);cursor:pointer;display:flex;align-items:center;gap:9px}
+.lm{width:32px;height:32px;border-radius:50%;background:var(--dk);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.navul{display:flex;gap:26px;list-style:none}
+.navul button{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mi);background:none;border:none;border-bottom:1.5px solid transparent;padding-bottom:2px;cursor:pointer;font-family:'DM Sans',Arial,sans-serif;transition:color .15s}
+.navul button.on{color:var(--dk);border-bottom-color:var(--ac);font-weight:500}
+.navul button:hover{color:var(--dk)}
+.nav-cta{background:var(--dk);color:var(--wh);padding:8px 20px;font-size:12px;font-weight:500;border:none;border-radius:2px;cursor:pointer;font-family:'DM Sans',Arial,sans-serif;letter-spacing:.04em;transition:background .15s}
+.nav-cta:hover{background:var(--ac)}
+.topbar{background:var(--ac);color:var(--wh);padding:9px 5%;text-align:center;font-size:12px;letter-spacing:.06em}
+.topbar button{color:var(--wh);background:none;border:none;text-decoration:underline;cursor:pointer;font-size:12px;font-family:'DM Sans',Arial,sans-serif}
+.ey{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ac);margin-bottom:14px;display:flex;align-items:center;gap:9px}
+.ey::before{content:'';width:18px;height:1px;background:var(--ac);flex-shrink:0}
+.ey.lt{color:var(--ro)}.ey.lt::before{background:var(--ro)}.ey.ct{justify-content:center}
+h1.display{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(42px,5.5vw,72px);font-weight:300;line-height:1.06;letter-spacing:-.02em;color:var(--dk);margin-bottom:20px}
+h1.display em,h2.section em{font-style:italic;color:var(--ac)}
+h1.display.lt{color:var(--wh)}h1.display.lt em{color:var(--ro)}
+h2.section{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(30px,3.5vw,48px);font-weight:300;line-height:1.1;letter-spacing:-.01em;color:var(--dk);margin-bottom:14px}
+h2.section.lt{color:var(--wh)}h2.section.lt em{color:var(--ro)}
+h2.section.sm{font-size:clamp(26px,2.8vw,38px)}
+h3.card-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:400;margin-bottom:8px;color:var(--dk)}
+.lead{font-size:16px;color:var(--mi);line-height:1.78;margin-bottom:18px}
+.lead.lt{color:rgba(253,252,250,.72)}
+.sec{padding:72px 5%}.sec-cr{padding:72px 5%;background:var(--cr)}.sec-dk{padding:72px 5%;background:var(--dk)}
+.wrap{max-width:1200px;margin:0 auto}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.split{display:grid;grid-template-columns:1fr 1fr}
+.sp{padding:56px 6%;display:flex;flex-direction:column;justify-content:center}
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:86vh}
+.hero-txt{padding:76px 5% 76px 6%;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--bd)}
+.hero-img{background:var(--cr);overflow:hidden}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.ph{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--bd)}
+.ph-vis{background:var(--cr);overflow:hidden;min-height:420px}
+.ph-vis img{width:100%;height:100%;object-fit:cover;display:block}
+.ph-dk{background:var(--dk);padding:60px 6%;display:flex;flex-direction:column;justify-content:flex-end}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);background:var(--dk)}
+.stat{padding:30px 4%;text-align:center;border-right:1px solid rgba(255,255,255,.08)}
+.stat:last-child{border-right:none}
+.sn{font-family:'Cormorant Garamond',Georgia,serif;font-size:50px;font-weight:300;color:var(--wh);line-height:1;margin-bottom:5px}
+.sl{font-size:12px;color:rgba(255,255,255,.45);letter-spacing:.04em}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);margin-top:40px}
+.pillar{background:var(--wh);padding:44px 34px;transition:background .2s}
+.pillar:hover{background:var(--cr)}
+.pn{font-family:'Cormorant Garamond',Georgia,serif;font-size:64px;font-weight:300;color:rgba(28,28,26,.12);line-height:1;margin-bottom:18px}
+.pt{font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;font-weight:400;margin-bottom:10px;color:var(--dk)}
+.pd{font-size:15px;color:var(--mi);line-height:1.7;margin-bottom:18px}
+.pbul{list-style:none;margin-bottom:24px}
+.pbul li{font-size:13px;color:var(--mi);padding:6px 0;border-top:1px solid var(--bd);display:flex;gap:9px;line-height:1.6}
+.pbul li::before{content:'—';color:var(--ac);flex-shrink:0}
+.bp{background:var(--dk);color:var(--wh);padding:12px 28px;font-size:13px;font-weight:500;border:none;border-radius:2px;cursor:pointer;font-family:'DM Sans',Arial,sans-serif;letter-spacing:.04em;transition:background .15s}
+.bp:hover{background:var(--ac)}
+.ba{background:var(--ac);color:var(--wh);padding:12px 28px;font-size:13px;font-weight:500;border:none;border-radius:2px;cursor:pointer;font-family:'DM Sans',Arial,sans-serif;letter-spacing:.04em}
+.bl{background:var(--wh);color:var(--dk);padding:12px 28px;font-size:13px;font-weight:500;border:none;border-radius:2px;cursor:pointer;font-family:'DM Sans',Arial,sans-serif;letter-spacing:.04em;transition:background .15s}
+.bl:hover{background:var(--al)}
+.bg-btn{background:none;color:rgba(253,252,250,.8);border:1px solid rgba(255,255,255,.3);padding:11px 24px;font-size:13px;border-radius:2px;cursor:pointer;font-family:'DM Sans',Arial,sans-serif;letter-spacing:.04em}
+.bu{font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--dk);background:none;border:none;border-bottom:1px solid var(--dk);padding-bottom:2px;cursor:pointer;font-family:'DM Sans',Arial,sans-serif;display:inline-block}
+.bu:hover{color:var(--ac);border-bottom-color:var(--ac)}
+.ghost-dk{background:none;color:var(--mi);border:none;font-size:13px;cursor:pointer;font-family:'DM Sans',Arial,sans-serif}
+.dlist{list-style:none;margin:14px 0 20px}
+.dlist li{display:flex;gap:11px;padding:8px 0;border-bottom:1px solid var(--bd);font-size:14px;color:var(--mi);line-height:1.65}
+.dlist li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--ac);flex-shrink:0;margin-top:8px}
+.dlist.lt li{color:rgba(253,252,250,.65);border-bottom-color:rgba(255,255,255,.1)}
+.dlist.lt li::before{background:var(--ro)}
+.cta-band{background:var(--dk);padding:68px 5%;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
+.cta-band h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(26px,3vw,42px);font-weight:300;line-height:1.15;color:var(--wh);max-width:540px}
+.cta-band h2 em{font-style:italic;color:var(--ro)}
+.cta-acts{display:flex;gap:14px;flex-wrap:wrap}
+.bgrid{display:flex;flex-wrap:wrap;border:1px solid var(--bd)}
+.bitem{flex:0 0 20%;border-right:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:18px 12px;display:flex;align-items:center;justify-content:center;filter:grayscale(1);opacity:.55;transition:opacity .2s,filter .2s}
+.bitem:hover{opacity:1;filter:none}
+.bname{font-size:11px;font-weight:500;color:var(--mi);text-align:center;letter-spacing:.03em}
+.pq{border-left:3px solid var(--ac);padding:16px 24px;margin:22px 0;font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-style:italic;font-weight:300;line-height:1.55;color:var(--dk);border-radius:0}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08);margin-top:36px}
+.step{padding:36px 28px;position:relative}
+.step-n{font-family:'Cormorant Garamond',Georgia,serif;font-size:64px;font-weight:300;color:rgba(255,255,255,.08);position:absolute;top:12px;right:18px;line-height:1}
+.step-t{font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:400;color:var(--wh);margin-bottom:9px}
+.step-d{font-size:14px;color:rgba(253,252,250,.56);line-height:1.75}
+.aud-card{border:1px solid var(--bd);overflow:hidden}
+.aud-top{height:220px;background:var(--cr);position:relative}
+.aud-ov{position:absolute;inset:0;background:rgba(28,28,26,.4);display:flex;align-items:flex-end;padding:18px 22px}
+.aud-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;font-weight:300;color:var(--wh)}
+.aud-body{padding:22px 26px}
+.tcard{background:var(--cr);border:1px solid var(--bd);padding:26px 28px}
+.tcard blockquote{font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;font-style:italic;font-weight:300;line-height:1.55;color:var(--dk);margin-bottom:12px}
+.tcard cite{font-size:12px;font-style:normal;color:var(--ro);letter-spacing:.05em}
+.db-def{border:1px solid rgba(255,255,255,.15);padding:28px 32px;font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-style:italic;line-height:1.65;color:rgba(253,252,250,.72)}
+.db-def strong{font-weight:600;font-style:normal;color:var(--wh)}
+.prog-g{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--bd);border:1px solid var(--bd);margin-top:32px}
+.prog-c{background:var(--wh);padding:34px 28px}
+.prog-c.dk{background:var(--dk)}
+.prog-ico{font-size:22px;margin-bottom:12px;color:var(--mi)}
+.prog-ico.lt{color:rgba(255,255,255,.4)}
+.prog-t{font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-weight:400;margin-bottom:8px;color:var(--dk)}
+.prog-t.lt{color:var(--wh)}
+.prog-d{font-size:14px;color:var(--mi);line-height:1.7}
+.prog-d.lt{color:rgba(253,252,250,.62)}
+.pi{padding:11px 0;border-bottom:1px solid var(--bd);font-size:15px;display:flex;gap:12px;color:var(--mi);line-height:1.65}
+.pi::before{content:'✓';color:var(--ac);font-weight:600;flex-shrink:0}
+.vision-g{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--bd)}
+.vc{padding:56px 5%}
+.vc:first-child{border-right:1px solid var(--bd)}
+.ah{font-family:'Cormorant Garamond',Georgia,serif;font-size:30px;font-weight:300;line-height:1.15;color:var(--dk);margin-bottom:12px}
+.arms{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);margin-top:32px}
+.arm{background:var(--wh);padding:36px 28px}
+.an{font-family:'Cormorant Garamond',Georgia,serif;font-size:48px;font-weight:300;color:rgba(28,28,26,.12);line-height:1;margin-bottom:14px}
+.at{font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-weight:400;margin-bottom:8px;color:var(--dk)}
+.ad{font-size:14px;color:var(--mi);line-height:1.75}
+.founders{display:flex;flex-direction:column;gap:22px;margin-top:32px}
+.founder{border:1px solid var(--bd);overflow:hidden;display:grid;grid-template-columns:200px 1fr}
+.f-img{background:var(--cr);overflow:hidden;min-height:260px;display:flex;align-items:center;justify-content:center}
+.f-img img{width:100%;height:100%;object-fit:cover;object-position:center 10%}
+.f-ini{font-family:'Cormorant Garamond',Georgia,serif;font-size:44px;font-weight:300;color:var(--mi)}
+.f-body{padding:28px}
+.f-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:400;margin-bottom:4px;color:var(--dk)}
+.f-role{font-size:11px;color:var(--ac);letter-spacing:.07em;text-transform:uppercase;margin-bottom:14px}
+.f-creds{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.fc{font-size:10px;background:var(--cr);border:1px solid var(--bd);padding:3px 8px;color:var(--mi)}
+.f-bio{font-size:14px;color:var(--mi);line-height:1.8}
+.f-bio p+p{margin-top:12px}
+.edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);margin-top:32px}
+.edu-card{background:var(--wh);padding:38px 28px}
+.edu-soon{display:inline-block;font-size:10px;background:var(--cr);border:1px solid var(--bd);color:var(--mi);padding:3px 9px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}
+.edu-ct{font-family:'Cormorant Garamond',Georgia,serif;font-size:23px;font-weight:400;margin-bottom:6px;color:var(--dk)}
+.edu-sub{font-size:12px;color:var(--ac);font-style:italic;margin-bottom:12px}
+.edu-list{list-style:none;padding:0;margin-bottom:20px}
+.edu-list li{font-size:13px;color:var(--mi);padding:5px 0;border-top:1px solid var(--bd);display:flex;gap:8px}
+.edu-list li::before{content:'—';color:var(--ac);flex-shrink:0}
+.feat-badge{display:inline-block;font-size:10px;background:var(--al);color:#993C1D;padding:3px 9px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px}
+.ev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
+.ev-card{border:1px solid var(--bd);overflow:hidden;position:relative}
+.ev-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--ac)}
+.ev-body{padding:28px 26px}
+.ev-type{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--ac);margin-bottom:12px}
+.ev-free{display:inline-block;font-size:10px;background:var(--ac);color:var(--wh);padding:3px 9px;margin-bottom:12px;letter-spacing:.08em;text-transform:uppercase}
+.ev-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;font-weight:400;margin-bottom:18px;line-height:1.2;color:var(--dk)}
+.ev-meta{display:flex;flex-direction:column;gap:9px;margin-bottom:18px}
+.ev-row{display:flex;gap:10px;font-size:14px}
+.ev-label{font-weight:500;color:var(--dk);display:block}
+.ev-val{color:var(--mi);line-height:1.5}
+.ev-desc{font-size:14px;color:var(--mi);line-height:1.7;margin-bottom:22px}
+.host-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.infobox{border:1px solid var(--bd);padding:28px}
+.nl-form{display:flex;max-width:380px;border:1px solid rgba(255,255,255,.2)}
+.nl-form input{flex:1;padding:11px 14px;font-size:13px;border:none;outline:none;background:transparent;color:var(--wh);font-family:'DM Sans',Arial,sans-serif}
+.nl-form input::placeholder{color:rgba(253,252,250,.45)}
+.nl-form button{padding:11px 18px;background:var(--ac);color:var(--wh);border:none;font-size:12px;cursor:pointer;font-family:'DM Sans',Arial,sans-serif}
+.aff-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd)}
+.aff-card{background:var(--wh);padding:40px 32px}
+.aff-logo{width:56px;height:56px;border-radius:50%;background:var(--cr);border:1px solid var(--bd);margin-bottom:18px;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',Georgia,serif;font-size:17px;color:var(--mi)}
+.aff-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:21px;font-weight:400;margin-bottom:8px;color:var(--dk)}
+.aff-desc{font-size:14px;color:var(--mi);line-height:1.7;margin-bottom:12px}
+.disc{display:inline-block;font-size:10px;font-weight:600;background:var(--al);color:#993C1D;padding:3px 9px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+.dcode{font-size:12px;color:var(--mi);background:var(--cr);border:1px solid var(--bd);padding:6px 12px;display:inline-block;font-family:monospace;letter-spacing:.1em;margin:4px 0 16px}
+.footer{background:#111110;padding:48px 5% 22px}
+.f-in{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:48px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.07)}
+.f-logo{font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;font-weight:700;color:var(--wh);cursor:pointer;margin-bottom:9px}
+.f-tag{font-size:13px;color:rgba(255,255,255,.35);line-height:1.7}
+.f-links{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.f-links button{font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.35);background:none;border:none;cursor:pointer;font-family:'DM Sans',Arial,sans-serif;text-align:left;padding:3px 0}
+.f-links button:hover{color:var(--wh)}
+.f-copy{font-size:11px;color:rgba(255,255,255,.2);text-align:center;padding-top:20px;max-width:1200px;margin:0 auto}
+@media(max-width:900px){.hero,.ph,.split,.g2,.g3,.pillars,.steps,.arms,.edu-grid,.aff-grid,.ev-grid,.founders,.prog-g,.host-grid,.vision-g{grid-template-columns:1fr}.hero-txt{border-right:none;border-bottom:1px solid var(--bd)}.vc:first-child{border-right:none;border-bottom:1px solid var(--bd)}.navul{display:none}.bitem{flex:0 0 33.3%}}
+</style>
+</head>
+<body>
+<div id="site">
+<div class="topbar">New: DRP Insider Info Session — <button onclick="go('events')">Register Now →</button></div>
+<nav class="nav"><div class="nav-in">
+  <div class="logo" onclick="go('home')"><div class="lm"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12M3 3l8 8M11 3l-8 8" stroke="#FDFCFA" stroke-width="1.4" stroke-linecap="round"/></svg></div>Dance Ready Project</div>
+  <ul class="navul"><li><button id="n-home" class="on" onclick="go('home')">Home</button></li><li><button id="n-score" onclick="go('score')">Assessment</button></li><li><button id="n-dansebridge" onclick="go('dansebridge')">Dansebridge</button></li><li><button id="n-education" onclick="go('education')">Education</button></li><li><button id="n-events" onclick="go('events')">Events</button></li><li><button id="n-about" onclick="go('about')">About Us</button></li><li><button id="n-affiliates" onclick="go('affiliates')">Affiliates</button></li></ul>
+  <button class="nav-cta">Sign In</button>
+</div></nav>
+
+<div class="page on" id="p-home">
+  <div class="hero"><div class="hero-txt"><p class="ey">Dance Medicine · Performance Science</p><h1 class="display">Reducing injury risk, <em>elevating</em> performance.</h1><p class="lead" style="max-width:420px;margin-bottom:38px">We serve dancers across the lifespan—from students to professionals—through research-based education, screening tools, and conditioning programs.</p><div style="display:flex;gap:16px;flex-wrap:wrap"><button class="ba" onclick="go('score')">Get Your Dance Ready Score</button><button class="ghost-dk" onclick="go('about')">Our Mission →</button></div></div><div class="hero-img"><img src="https://s3.us-east-1.amazonaws.com/contents.newzenler.com/9238/library/645a93aed751a_1683657646_web-images_lg.jpg" alt="Dancer" onerror="this.parentNode.style.background='var(--cr)'"></div></div>
+  <div class="stats"><div class="stat"><div class="sn">37%</div><div class="sl">Reduction in overuse injuries</div></div><div class="stat"><div class="sn">33%</div><div class="sl">Reduction in time-loss injuries</div></div><div class="stat"><div class="sn">13+</div><div class="sl">Major organisations served</div></div></div>
+  <div class="sec-cr"><div class="wrap"><p class="ey">Our Model</p><h2 class="section">Three integrated <em>arms</em> of care</h2><p class="lead" style="max-width:520px;margin-bottom:0">An evidence-based framework that bridges the gap between dance science and studio practice.</p><div class="pillars"><div class="pillar"><div class="pn">01</div><div class="pt">Assessment</div><p class="pd">The Dance Ready Score™ acts as a GPS for dancers—pinpointing current fitness level and providing a roadmap to peak performance.</p><ul class="pbul"><li>Unbiased, science-based guidelines</li><li>Immediate results &amp; real-time feedback</li><li>No professional licensure required</li></ul><button class="bu" onclick="go('score')">Explore DRS →</button></div><div class="pillar"><div class="pn">02</div><div class="pt">Conditioning</div><p class="pd">Dansebridge Online — a self-paced cross-training program specifically designed for dancers to build strength and prevent injury.</p><ul class="pbul"><li>Research-based progressive programming</li><li>30 min · 5 days/week · 6 weeks</li><li>Supervised with check-in calls</li></ul><button class="bu" onclick="go('dansebridge')">Explore Dansebridge →</button></div><div class="pillar"><div class="pn">03</div><div class="pt">Education</div><p class="pd">Workshops, webinars, and online content equipping dancers and educators with critical knowledge about dancer health.</p><ul class="pbul"><li>Functional anatomy workshops</li><li>Performance &amp; technique enhancement</li><li>Sleep &amp; immune health lectures</li></ul><button class="bu" onclick="go('education')">Explore Education →</button></div></div></div></div>
+  <div class="cta-band"><h2>Ready to <em>dance smarter,</em> not harder?</h2><div class="cta-acts"><button class="bl">Book a Consultation</button><button class="bg-btn" onclick="go('events')">View Events →</button></div></div>
+  <div class="sec"><div class="wrap"><p style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mi);text-align:center;margin-bottom:28px">Trusted by leading organisations</p><div class="bgrid"><div class="bitem"><span class="bname">Alvin Ailey</span></div><div class="bitem"><span class="bname">Pivot Dancer</span></div><div class="bitem"><span class="bname">Dance Inst. of Washington</span></div><div class="bitem"><span class="bname">Netflix — Bridgerton</span></div><div class="bitem"><span class="bname">Broadway Productions</span></div><div class="bitem"><span class="bname">Univ. of Maryland</span></div><div class="bitem"><span class="bname">Black Dance Change Makers</span></div><div class="bitem"><span class="bname">Freed of London</span></div><div class="bitem"><span class="bname">Healthy Dancer Summer</span></div><div class="bitem"><span class="bname">Kirov Ballet</span></div></div></div></div>
+  <footer class="footer"><div class="f-in"><div><div class="f-logo" onclick="go('home')">Dance Ready Project</div><p class="f-tag">Reducing injury risk and elevating performance for dancers across the lifespan.</p></div><div class="f-links"><button onclick="go('home')">Home</button><button onclick="go('score')">Assessment</button><button onclick="go('dansebridge')">Dansebridge</button><button onclick="go('education')">Education</button><button onclick="go('events')">Events</button><button onclick="go('about')">About Us</button><button onclick="go('affiliates')">Affiliates</button></div></div><p class="f-copy">© 2026 Dance Ready Project. All rights reserved.</p></footer>
+</div>
+
+<div class="page" id="p-score">
+  <div class="ph"><div class="ph-vis"><img src="https://s3.us-east-1.amazonaws.com/contents.newzenler.com/9238/library/ance-eady-screen60d5636b1af0c_lg.jpeg" alt="DRS" onerror="this.parentNode.style.background='var(--cr)'"></div><div class="ph-dk"><p class="ey lt">Baseline Fitness Assessment</p><h1 class="display lt">Dance Ready <em>Score™</em></h1><p class="lead lt">Like all athletes, dancers benefit from knowing their fitness baseline before beginning a training season.</p></div></div>
+  <div class="sec"><div class="wrap" style="display:grid;grid-template-columns:3fr 2fr;gap:64px;align-items:start"><div><p class="ey">What is the DRS?</p><h2 class="section">Your performance <em>GPS</em></h2><p class="lead">The Dance Ready Score acts as a GPS for dancers — pinpointing current fitness level, identifying goals, and providing a clear roadmap to achieve them.</p><ul class="dlist"><li>Identifies strengths to build upon</li><li>Highlights vulnerabilities that may lead to injury</li><li>Delivers real-time insights into performance capacity</li><li>Reduces risk of injuries and optimises performance</li><li>Safeguards financial stability through decreased injury costs</li></ul><div style="display:flex;gap:14px;flex-wrap:wrap"><button class="bp">Get the Dance Ready Score</button><button class="ghost-dk">Talk with us →</button></div></div><div><div class="pq">"The DRS provides a framework for structured wellness that serves as an adjunct to technique training."</div><div style="border:1px solid var(--bd);padding:28px;margin-top:20px"><p class="ey" style="margin-bottom:12px">How DRS is different</p><ul class="dlist"><li>Immediate results &amp; real-time feedback</li><li>Language dancers and administrators understand</li><li>Results for both dancers &amp; administrators</li><li>No licensure required to administer</li></ul></div></div></div></div>
+  <div class="sec-dk"><div class="wrap"><p class="ey lt">Process</p><h2 class="section lt">How it <em>works</em></h2><div class="steps"><div class="step"><div class="step-n">01</div><div class="step-t">Assessment</div><p class="step-d">Dancers go through fitness testing and receive their scores. Quick, non-invasive screening with immediate feedback on performance capacity.</p></div><div class="step"><div class="step-n">02</div><div class="step-t">Workshop</div><p class="step-d">Review your scores and understand the implications for training, performance, and injury risk.</p></div><div class="step"><div class="step-n">03</div><div class="step-t">Performance Enhancement</div><p class="step-d">Receive a structured framework to address results. Corrective exercise prescriptions tailored to your unique profile.</p></div></div></div></div>
+  <div class="sec-cr"><div class="wrap"><p class="ey">Who It's For</p><h2 class="section">Built for <em>dancers</em> and administrators</h2><div class="g2" style="margin-top:28px"><div class="aud-card"><div class="aud-top"><div class="aud-ov"><div class="aud-title">For Dancers</div></div></div><div class="aud-body"><p class="lead" style="margin-bottom:12px">Unlock the secrets to your dance performance.</p><ol style="padding-left:16px"><li style="font-size:14px;color:var(--mi);padding:4px 0;line-height:1.65">Understand your body through detailed analysis</li><li style="font-size:14px;color:var(--mi);padding:4px 0;line-height:1.65">Identify your strengths and vulnerabilities</li><li style="font-size:14px;color:var(--mi);padding:4px 0;line-height:1.65">Understand how injuries affect performance</li><li style="font-size:14px;color:var(--mi);padding:4px 0;line-height:1.65">Find a clear path to improving your dance capacity</li></ol></div></div><div class="aud-card"><div class="aud-top"><div class="aud-ov"><div class="aud-title">For Administrators</div></div></div><div class="aud-body"><p class="lead" style="margin-bottom:12px">Protect your organisation's fiscal bottom line.</p><ol style="padding-left:16px"><li style="font-size:14px;color:var(--mi);padding:4px 0;line-height:1.65">Understand injury trends in your organisation</li><li style="font-size:14px;color:var(--mi);padding:4px 0;line-height:1.65">Assess the performance capacity of your dancers</li><li style="font-size:14px;color:var(--mi);padding:4px 0;line-height:1.65">Evaluate ability to meet choreography demands</li><li style="font-size:14px;color:var(--mi);padding:4px 0;line-height:1.65">Access a framework for performance enhancement</li></ol></div></div></div></div></div>
+  <div class="cta-band"><h2>Ready to know your <em>Dance Ready Score?</em></h2><button class="bl">Get the Dance Ready Score</button></div>
+  <footer class="footer"><div class="f-in"><div><div class="f-logo" onclick="go('home')">Dance Ready Project</div><p class="f-tag">Reducing injury risk and elevating performance for dancers across the lifespan.</p></div><div class="f-links"><button onclick="go('home')">Home</button><button onclick="go('dansebridge')">Dansebridge</button><button onclick="go('education')">Education</button><button onclick="go('events')">Events</button><button onclick="go('about')">About</button><button onclick="go('affiliates')">Affiliates</button></div></div><p class="f-copy">© 2026 Dance Ready Project. All rights reserved.</p></footer>
+</div>
+
+<div class="page" id="p-dansebridge">
+  <div class="ph"><div class="ph-vis"><img src="https://s3.us-east-1.amazonaws.com/contents.newzenler.com/9238/library/creen-hot-2023-03-02-at-11-09-116400caeda7866_lg.png" alt="Dansebridge" onerror="this.parentNode.style.background='var(--dk)'"></div><div class="ph-dk"><p class="ey lt">Online Conditioning Program</p><h1 class="display lt">Danse<em>bridge</em> Online</h1><p class="lead lt" style="margin-bottom:28px">A self-paced cross-training program designed by a specialist for dancers who want to move better, get stronger, and prevent injury.</p><div style="display:flex;gap:14px"><button class="ba">Sign Up for Dansebridge</button><button class="bg-btn">Learn More →</button></div></div></div>
+  <div class="split"><div style="background:var(--dk);padding:52px 6%;display:flex;flex-direction:column;justify-content:center"><div class="db-def"><strong>Bridge</strong> [brij] <em>noun</em><br><br>A time, place, or means of connection and transition. The gap between where you are and where you want to be.</div></div><div class="sp" style="background:var(--cr)"><p class="ey">The Promise</p><h2 class="section sm">What if you could <em>finally…</em></h2><div class="pi">Get over that lingering injury you've been putting off</div><div class="pi">Get your leg higher than it's been in three years</div><div class="pi">Earn the attention of your choreographer</div><div class="pi">Conquer that skill you've always struggled with</div><div class="pi">Return to — and surpass — your pre-injury fitness level</div></div></div>
+  <div class="sec-cr"><div class="wrap"><p class="ey">The Program</p><h2 class="section">What's <em>included</em></h2><div class="prog-g"><div class="prog-c"><div class="prog-ico">◎</div><div class="prog-t">Individual Assessment</div><p class="prog-d">Identify your goals, establish your baseline, and receive recommendations on where to focus your training for maximum results.</p></div><div class="prog-c dk"><div class="prog-ico lt">◈</div><div class="prog-t lt">6 Weeks of Training</div><p class="prog-d lt">Specially designed progressive program. 30 minutes · 5 days a week · 6 weeks.</p></div><div class="prog-c dk"><div class="prog-ico lt">◑</div><div class="prog-t lt">Check-In Calls</div><p class="prog-d lt">Check in to troubleshoot issues as you work and grow stronger. You're not alone.</p></div><div class="prog-c"><div class="prog-ico">◉</div><div class="prog-t">Community</div><p class="prog-d">An encouraging community that keeps you accountable and connected throughout your journey.</p></div></div></div></div>
+  <div class="sec"><div class="wrap"><p class="ey">Hear From Dancers</p><h2 class="section">Real results, real <em>dancers</em></h2><div class="g2" style="margin-top:28px"><div class="tcard"><blockquote>"In 30 minutes, I get my heart rate up and work muscles I didn't know I had. This class has become part of my routine!"</blockquote><cite>— Katrina M.</cite></div><div class="tcard"><blockquote>"Lifting my legs is easier. My jumps have gotten better — I used to get stuck in the middle of my rond de jambe."</blockquote><cite>— Valentina B.</cite></div><div class="tcard"><blockquote>"My attitudes and arabesques have gotten a lot better, especially my attitudes — they were always on the not so good side!"</blockquote><cite>— Naima A.</cite></div><div class="tcard"><blockquote>"I really feel my body working and changing. I think I should keep going with this kind of work!"</blockquote><cite>— Giorgia P.</cite></div></div></div></div>
+  <div class="cta-band"><h2>Ready to work <em>smarter?</em></h2><button class="bl">Get Me In Now</button></div>
+  <footer class="footer"><div class="f-in"><div><div class="f-logo" onclick="go('home')">Dance Ready Project</div><p class="f-tag">Reducing injury risk and elevating performance for dancers across the lifespan.</p></div><div class="f-links"><button onclick="go('home')">Home</button><button onclick="go('score')">Assessment</button><button onclick="go('education')">Education</button><button onclick="go('events')">Events</button><button onclick="go('about')">About</button><button onclick="go('affiliates')">Affiliates</button></div></div><p class="f-copy">© 2026 Dance Ready Project. All rights reserved.</p></footer>
+</div>
+
+<div class="page" id="p-education">
+  <div class="ph"><div class="ph-vis"><img src="https://s3.us-east-1.amazonaws.com/contents.newzenler.com/9238/library/0-uscles-keleton-ull-160786c6e82038_lg.jpg" alt="Education" onerror="this.parentNode.style.background='var(--cr)'"></div><div class="ph-dk"><p class="ey lt">Knowledge Is Power</p><h1 class="display lt">Educational <em>Offerings</em></h1><p class="lead lt">Equipping dancers, educators, and healthcare providers with critical knowledge about dancer health, injury risk, and performance readiness.</p></div></div>
+  <div class="sec"><div class="wrap"><p class="ey">What We Teach</p><h2 class="section">Built for every <em>stage</em> of your journey</h2><div class="edu-grid"><div class="edu-card"><span class="edu-soon">Coming Soon</span><div class="edu-ct">Technique Enhancement</div><div class="edu-sub">Unleash your potential</div><ul class="edu-list"><li>Technique correction principles</li><li>Ways to improve turnout safely</li><li>Best exercises to increase flexibility</li></ul><button class="bu">Notify Me →</button></div><div class="edu-card"><span class="edu-soon">Coming Soon</span><div class="edu-ct">Wellness Workshops</div><div class="edu-sub">Learn the inner workings of your body</div><ul class="edu-list"><li>Nutrition for dancers</li><li>Mental health &amp; performance</li><li>Sleep &amp; immune health</li></ul><button class="bu">Notify Me →</button></div><div class="edu-card"><span class="edu-soon">Coming Soon</span><div class="edu-ct">Anatomy for Dancers</div><div class="edu-sub">3D views of the body in motion</div><ul class="edu-list"><li>Muscles, bones &amp; joints in depth</li><li>Structures used in dance movement</li><li>Biomechanics behind technique</li></ul><button class="bu">Notify Me →</button></div></div></div></div>
+  <div class="split" style="background:var(--cr)"><div class="sp"><span class="feat-badge">Featured Course</span><h2 class="section sm">For Dance <em>Teachers</em></h2><p class="lead">Join DRP's co-founders for a four-week course to unlock dance teachers' potential — covering the science and practice behind excellent teaching.</p><ul class="dlist"><li>Health &amp; wellness concepts including warm-up and cool-down science</li><li>Anatomy and biomechanics behind foundational dance technique</li><li>Effective cueing for turnout, port de bras &amp; core alignment</li></ul><div style="display:flex;gap:14px;margin-top:16px;flex-wrap:wrap"><button class="bp">Enrol Now</button><button class="ghost-dk">Watch the Replay →</button></div></div><div style="background:var(--cr);overflow:hidden;min-height:400px"><img src="https://s3.us-east-1.amazonaws.com/contents.newzenler.com/9238/library/raining-eries-thumbnail617568da4fe83-lg63b38975bcbee_lg.png" alt="Teacher Course" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.style.display='none'"></div></div>
+  <div class="sec-dk" style="text-align:center"><div style="max-width:480px;margin:0 auto"><p class="ey lt ct">Stay Informed</p><h2 class="section lt" style="margin-bottom:10px">Stay up to date on <em>industry trends</em></h2><p class="lead lt" style="margin-bottom:24px">Join our newsletter for the latest in dance medicine, education, and performance science.</p><div class="nl-form" style="margin:0 auto"><input type="email" placeholder="Your email address"><button>Subscribe</button></div></div></div>
+  <div class="cta-band"><h2>Want to <em>work with us?</em></h2><button class="bl">Connect With Us</button></div>
+  <footer class="footer"><div class="f-in"><div><div class="f-logo" onclick="go('home')">Dance Ready Project</div><p class="f-tag">Reducing injury risk and elevating performance for dancers across the lifespan.</p></div><div class="f-links"><button onclick="go('home')">Home</button><button onclick="go('score')">Assessment</button><button onclick="go('dansebridge')">Dansebridge</button><button onclick="go('events')">Events</button><button onclick="go('about')">About</button><button onclick="go('affiliates')">Affiliates</button></div></div><p class="f-copy">© 2026 Dance Ready Project. All rights reserved.</p></footer>
+</div>
+
+<div class="page" id="p-events">
+  <div class="ph"><div class="ph-vis" style="background:var(--dk);display:flex;align-items:center;justify-content:center"><p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:100px;font-weight:300;color:rgba(255,255,255,.06);line-height:1">2026</p></div><div class="ph-dk"><p class="ey lt">Join Us In Person &amp; Online</p><h1 class="display lt">Upcoming <em>Events</em></h1><p class="lead lt">Screenings, workshops, meet-and-greets, and info sessions — designed to connect the dance community with the resources they need.</p></div></div>
+  <div class="sec"><div class="wrap"><p class="ey">On the Calendar</p><h2 class="section">Don't miss <em>these</em></h2><div class="ev-grid"><div class="ev-card"><div class="ev-body"><p class="ev-type">Free · Online</p><span class="ev-free">Free Event</span><div class="ev-title">DRS Info Session</div><div class="ev-meta"><div class="ev-row"><span style="flex-shrink:0;color:var(--ac)">◈</span><div><span class="ev-label">Wednesday, January 22nd</span><span class="ev-val">7:30 PM – 9:00 PM</span></div></div><div class="ev-row"><span style="flex-shrink:0;color:var(--ac)">◎</span><div><span class="ev-val">Online — link sent on registration</span></div></div></div><p class="ev-desc">Learn everything about the Dance Ready Score — what it measures, how it works, and how it can transform your dancers' training.</p><button class="bp" style="font-size:12px;padding:9px 20px">Register Free</button></div></div><div class="ev-card"><div class="ev-body"><p class="ev-type">In Person · DC</p><div class="ev-title">Meet &amp; Greet</div><div class="ev-meta"><div class="ev-row"><span style="flex-shrink:0;color:var(--ac)">◈</span><div><span class="ev-label">Friday, February 7th</span><span class="ev-val">5:30 PM – 7:30 PM</span></div></div><div class="ev-row"><span style="flex-shrink:0;color:var(--ac)">◎</span><div><span class="ev-label">St. James Restaurant</span><span class="ev-val">2017 14th St NW, Washington DC</span></div></div></div><p class="ev-desc">Connect with the Dance Ready Project team and fellow dancers in an informal, welcoming setting. Great conversation guaranteed.</p><button class="bp" style="font-size:12px;padding:9px 20px">RSVP Now</button></div></div><div class="ev-card"><div class="ev-body"><p class="ev-type">In Person · DC</p><div class="ev-title">DRS Day in DC</div><div class="ev-meta"><div class="ev-row"><span style="flex-shrink:0;color:var(--ac)">◈</span><div><span class="ev-label">Saturday, February 8th</span><span class="ev-val">1:00 PM – 4:00 PM</span></div></div><div class="ev-row"><span style="flex-shrink:0;color:var(--ac)">◎</span><div><span class="ev-label">The Viva School</span><span class="ev-val">1923 Vermont Ave NW Suite T002, Washington DC 20001</span></div></div></div><p class="ev-desc">A full afternoon of Dance Ready Score assessments and workshops. Leave with your score and a clear roadmap.</p><button class="bp" style="font-size:12px;padding:9px 20px">Book Your Spot</button></div></div></div></div></div>
+  <div class="sec-cr"><div class="wrap"><div class="host-grid"><div><p class="ey">Bring DRP to You</p><h2 class="section sm">Host an event at your <em>studio or school</em></h2><p class="lead">We partner with studios, dance schools, companies, and organisations to bring the Dance Ready Score assessment and wellness workshops directly to your dancers.</p><button class="bp">Talk With Us</button></div><div class="infobox"><p style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mi);margin-bottom:16px">What's included in a hosted event</p><ul class="dlist"><li>On-site Dance Ready Score assessments for all dancers</li><li>Group results workshop with your team</li><li>Corrective exercise and performance roadmap</li><li>Follow-up consultation available</li></ul></div></div></div></div>
+  <div class="sec-dk" style="text-align:center"><div style="max-width:440px;margin:0 auto"><p class="ey lt ct">Never Miss an Event</p><h2 class="section lt" style="margin-bottom:10px">Get announcements <em>first</em></h2><p class="lead lt" style="margin-bottom:22px">Subscribe and be the first to know about new events, workshops, and info sessions near you.</p><div class="nl-form" style="margin:0 auto"><input type="email" placeholder="Your email address"><button>Subscribe</button></div></div></div>
+  <footer class="footer"><div class="f-in"><div><div class="f-logo" onclick="go('home')">Dance Ready Project</div><p class="f-tag">Reducing injury risk and elevating performance for dancers across the lifespan.</p></div><div class="f-links"><button onclick="go('home')">Home</button><button onclick="go('score')">Assessment</button><button onclick="go('dansebridge')">Dansebridge</button><button onclick="go('education')">Education</button><button onclick="go('about')">About</button><button onclick="go('affiliates')">Affiliates</button></div></div><p class="f-copy">© 2026 Dance Ready Project. All rights reserved.</p></footer>
+</div>
+
+<div class="page" id="p-about">
+  <div class="ph"><div class="ph-vis"><img src="https://s3.us-east-1.amazonaws.com/contents.newzenler.com/9238/library/samantha-weisburg-h-cx-s-6g-unsplash5fccd7626bbc4_lg.jpg" alt="About" onerror="this.parentNode.style.background='var(--cr)'"></div><div class="ph-dk"><p class="ey lt">Who We Are</p><h1 class="display lt">About the Dance Ready <em>Project™</em></h1></div></div>
+  <div class="vision-g"><div class="vc"><p class="ey">Our Vision</p><h2 class="ah">Elevating the standard of care for dancers.</h2><p class="lead">To bridge the gap between dance science and studios — bringing evidence-based practice to every dancer, at every level, in every institution.</p></div><div class="vc"><p class="ey">Our Mission</p><h2 class="ah">Empowering dancers through knowledge and tools.</h2><p class="lead">To empower dancers and dance organisations with research-based education, screening tools, and conditioning programs that improve performance and reduce injury across the lifespan.</p></div></div>
+  <div class="sec-cr"><div class="wrap"><p class="ey">Our Approach</p><h2 class="section">Three arms, one <em>integrated</em> model</h2><div class="arms"><div class="arm"><div class="an">01</div><div class="at">Education</div><p class="ad">Through workshops, webinars, studio consultations, and online content, we equip dancers, educators, and healthcare providers with critical information about dancer health, injury risk, and performance readiness.</p><button class="bu" style="margin-top:16px" onclick="go('education')">Learn More →</button></div><div class="arm"><div class="an">02</div><div class="at">Fitness Assessment</div><p class="ad">The Dance Ready Score™ is used by studios, companies, and schools across the country to proactively support dancer health and inform training decisions.</p><button class="bu" style="margin-top:16px" onclick="go('score')">Learn More →</button></div><div class="arm"><div class="an">03</div><div class="at">Dance Conditioning</div><p class="ad">Customised interventions and conditioning programs that help dancers strengthen weaknesses, enhance performance, and prevent future injuries — grounded in sports science.</p><button class="bu" style="margin-top:16px" onclick="go('dansebridge')">Learn More →</button></div></div></div></div>
+  <div class="sec"><div class="wrap"><p class="ey">Leadership</p><h2 class="section">Our <em>founders</em></h2><div class="founders"><div class="founder"><div class="f-img"><img src="https://s3.us-east-1.amazonaws.com/contents.newzenler.com/9238/library/20230414-0007644d9d5fa6e1a_lg.jpg" alt="Dr. Sheyi" onerror="this.style.display='none';this.parentNode.innerHTML='<span class=f-ini>SO</span>'"></div><div class="f-body"><div class="f-name">Dr. Sheyi Ojofeitimi</div><div class="f-role">Co-Founder · PT, DPT, OCS</div><div class="f-creds"><span class="fc">Alvin Ailey Dance Foundation</span><span class="fc">Dance/USA Board</span><span class="fc">ADAM Center</span></div><div class="f-bio"><p>Licensed physical therapist and Director of Therapy Services at the Alvin Ailey Dance Foundation. Her work has reduced overuse injuries by 37% and time-loss injuries by 33%.</p><p>Published researcher and co-author of <em>Dance Injuries: Reducing Risk and Maximizing Performance</em>. Has worked with Wicked, The Book of Mormon, Free Style Love Supreme, and other major Broadway productions.</p></div></div></div><div class="founder"><div class="f-img"><img src="https://s3.us-east-1.amazonaws.com/contents.newzenler.com/9238/library/5fccd2f593d88_lg.jpg" alt="Dr. Danelle" onerror="this.style.display='none';this.parentNode.innerHTML='<span class=f-ini>DD</span>'"></div><div class="f-body"><div class="f-name">Dr. Danelle Dickson</div><div class="f-role">Co-Founder · PT, DPT, OCS</div><div class="f-creds"><span class="fc">Performance Plus PT</span><span class="fc">IADMS Member</span><span class="fc">DAE Podcast Host</span></div><div class="f-bio"><p>Licensed physical therapist, Performing Arts specialist, and creator of Dansebridge Online. With 42 years in dance and 17 years in clinical practice, she has worked with thousands of dancers at pre-professional and professional levels.</p><p>Has worked with Netflix's Bridgerton, Alvin Ailey, and Tony Award-winning productions. Featured in APTA Magazine (2022) for innovation in clinical practice.</p></div></div></div></div></div></div>
+  <div class="cta-band"><h2>Get your best <em>dance life.</em></h2><div class="cta-acts"><button class="bl">Start Your Journey</button><button class="bg-btn" onclick="go('events')">View Events →</button></div></div>
+  <footer class="footer"><div class="f-in"><div><div class="f-logo" onclick="go('home')">Dance Ready Project</div><p class="f-tag">Reducing injury risk and elevating performance for dancers across the lifespan.</p></div><div class="f-links"><button onclick="go('home')">Home</button><button onclick="go('score')">Assessment</button><button onclick="go('dansebridge')">Dansebridge</button><button onclick="go('education')">Education</button><button onclick="go('events')">Events</button><button onclick="go('affiliates')">Affiliates</button></div></div><p class="f-copy">© 2026 Dance Ready Project. All rights reserved.</p></footer>
+</div>
+
+<div class="page" id="p-affiliates">
+  <div class="ph"><div class="ph-vis" style="background:var(--cr);display:flex;align-items:center;justify-content:center"><p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:120px;font-weight:300;color:rgba(28,28,26,.07);line-height:1">DRP</p></div><div class="ph-dk"><p class="ey lt">Partner Discounts</p><h1 class="display lt">Affiliate <em>Partners</em></h1><p class="lead lt">Products we trust and recommend for dancers. Exclusive discounts available through Dance Ready Project.</p></div></div>
+  <div class="sec"><div class="wrap"><p class="ey">Our Partners</p><h2 class="section">Products we <em>genuinely</em> trust</h2><div class="aff-grid" style="margin-top:32px"><div class="aff-card"><div class="aff-logo">KT</div><div class="aff-name">KTape MySkin Kinesiotape</div><p class="aff-desc">Kinesiotape designed for athletes of all skin tones. Crafted to provide superior performance and visibility on diverse skin.</p><span class="disc">25% Off</span><br><span class="dcode">DRP25</span><br><button class="bu" style="margin-top:10px">Shop Now →</button></div><div class="aff-card"><div class="aff-logo">ION</div><div class="aff-name">ION Performance Products</div><p class="aff-desc">All-natural performance body care crafted specifically for athletes. Clean ingredients, high performance — designed to support recovery and daily training.</p><span class="disc">25% Off</span><br><span class="dcode">DANCEREADY</span><br><button class="bu" style="margin-top:10px">Shop Now →</button></div><div class="aff-card"><div class="aff-logo">CX</div><div class="aff-name">Crosspuncture® Therapy</div><p class="aff-desc">Versatile therapy tool for trigger points, acupuncture points, tense muscles, and sore joints. Used by practitioners and athletes for targeted relief.</p><span class="disc">Special Pricing</span><br><br><button class="bu" style="margin-top:10px">Shop with Discount →</button></div></div></div></div>
+  <div class="sec-cr"><div class="wrap" style="max-width:600px;text-align:center"><p class="ey ct">Partner With Us</p><h2 class="section" style="margin-bottom:12px">Become an <em>affiliate</em></h2><p class="lead" style="margin-bottom:28px">We partner with brands whose products we genuinely use and trust for dancers. If you have a product that serves the dance community, we'd love to hear from you.</p><button class="bp">Get in Touch</button></div></div>
+  <footer class="footer"><div class="f-in"><div><div class="f-logo" onclick="go('home')">Dance Ready Project</div><p class="f-tag">Reducing injury risk and elevating performance for dancers across the lifespan.</p></div><div class="f-links"><button onclick="go('home')">Home</button><button onclick="go('score')">Assessment</button><button onclick="go('dansebridge')">Dansebridge</button><button onclick="go('education')">Education</button><button onclick="go('events')">Events</button><button onclick="go('about')">About</button></div></div><p class="f-copy">© 2026 Dance Ready Project. All rights reserved.</p></footer>
+</div>
+
+</div>
+<script>
+var IDS=['home','score','dansebridge','education','events','about','affiliates'];
+function go(id){IDS.forEach(function(p){var pg=document.getElementById('p-'+p);var nb=document.getElementById('n-'+p);if(pg)pg.classList.remove('on');if(nb)nb.classList.remove('on');});document.getElementById('p-'+id).classList.add('on');document.getElementById('n-'+id).classList.add('on');document.getElementById('site').scrollIntoView({behavior:'smooth',block:'start'});}
+</script>
+</body>
+</html>
