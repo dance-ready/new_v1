@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upcoming Events | Dance Ready Project</title>
+<meta name="description" content="Screenings, workshops, meet-and-greets, and info sessions — connecting the dance community with the resources they need.">
+<link rel="icon" type="image/png" href="assets/images/logo-dark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="page-events">
+
+<div class="topbar">New: DRP Insider Info Session — <a href="events.html">Register Now →</a></div>
+
+<nav class="nav"><div class="nav-in">
+  <a class="logo" href="index.html">
+    <span class="lm"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12M3 3l8 8M11 3l-8 8" stroke="#FDFCFA" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+    Dance Ready Project
+  </a>
+  <ul class="nl">
+    <li><a href="index.html" data-nav="home">Home</a></li>
+    <li><a href="assessment.html" data-nav="assessment">Assessment</a></li>
+    <li><a href="dansebridge.html" data-nav="dansebridge">Dansebridge</a></li>
+    <li><a href="education.html" data-nav="education">Education</a></li>
+    <li><a class="on" href="events.html" data-nav="events">Events</a></li>
+    <li><a href="about.html" data-nav="about">About Us</a></li>
+    <li><a href="affiliates.html" data-nav="affiliates">Affiliates</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Toggle navigation"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+  <a class="nc" href="assessment.html">Get Your Score</a>
+</div></nav>
+
+<main>
+
+  <div class="ph" style="background:linear-gradient(160deg,#100e08,#2a1e06);min-height:58vh">
+    <img class="ph-bg" src="assets/images/events-hero.jpg" alt="" onerror="this.style.display='none'">
+    <div class="ph-ov"></div>
+    <div class="ph-c">
+      <p class="ey lt">Join Us In Person & Online</p>
+      <h1 class="disp" style="color:#FDFCFA">Upcoming <em>Events</em></h1>
+      <p style="font-size:15px;color:rgba(253,252,250,.65);max-width:520px;line-height:1.75">Screenings, workshops, meet-and-greets, and info sessions — connecting the dance community with the resources they need.</p>
+    </div>
+  </div>
+
+  <div class="sec"><div class="wrap">
+    <p class="ey">On the Calendar</p>
+    <h2 class="sec">Click each event to <em>expand</em></h2>
+    <div id="events-list" style="margin-top:24px"></div>
+  </div></div>
+
+  <div class="sec-cr"><div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start">
+    <div>
+      <p class="ey">Bring DRP to You</p>
+      <h2 class="sec sm">Host an event at your <em>studio or school</em></h2>
+      <p class="lead">We partner with studios, schools, and companies to bring the Dance Ready Score and wellness workshops directly to your dancers.</p>
+      <button class="bp">Talk With Us</button>
+    </div>
+    <div style="border:1px solid var(--bd);padding:24px">
+      <p style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--stone);margin-bottom:14px">What's included</p>
+      <ul class="dlist">
+        <li>On-site Dance Ready Score assessments for all dancers</li>
+        <li>Group results workshop with your team</li>
+        <li>Corrective exercise and performance roadmap</li>
+        <li>Follow-up consultation available</li>
+      </ul>
+    </div>
+  </div></div>
+
+  <div class="sec-dk" style="text-align:center"><div style="max-width:420px;margin:0 auto">
+    <p class="ey lt ct">Never Miss an Event</p>
+    <h2 class="sec lt sm" style="margin-bottom:10px">Get announcements <em>first</em></h2>
+    <form class="nl-form" style="margin:0 auto" onsubmit="event.preventDefault();this.reset();this.querySelector('button').textContent='Thanks!'"><input type="email" placeholder="Your email address" required><button type="submit">Subscribe</button></form>
+  </div></div>
+
+</main>
+
+<footer class="footer"><div class="f-in">
+  <div>
+    <a class="f-logo" href="index.html">Dance Ready Project</a>
+    <p class="f-tag">Reducing injury risk and elevating performance for dancers across the lifespan.</p>
+  </div>
+  <div class="f-links">
+    <a href="index.html">Home</a>
+    <a href="assessment.html">Assessment</a>
+    <a href="dansebridge.html">Dansebridge</a>
+    <a href="education.html">Education</a>
+    <a href="about.html">About Us</a>
+    <a href="affiliates.html">Affiliates</a>
+  </div>
+</div><p class="f-copy">© 2026 Dance Ready Project. All rights reserved.</p></footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/components.js"></script>
+</body>
+</html>
