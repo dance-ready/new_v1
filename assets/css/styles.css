@@ -97,6 +97,14 @@ h3.ct{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:400;marg
 .ph{position:relative;min-height:62vh;display:flex;align-items:flex-end;overflow:hidden}
 .ph-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(28,28,26,.7) 0%,rgba(28,28,26,.22) 55%,rgba(28,28,26,0) 100%)}
 .ph-c{position:relative;z-index:2;padding:40px 6% 52px;width:100%}
+@media (max-width:860px){
+  .ph-split{grid-template-columns:1fr !important;min-height:auto !important}
+  .ph-split > div:first-child{padding:56px 24px !important;background:#3a3a3c !important}
+  .ph-split > div:last-child{height:60vh;min-height:380px}
+  .ph-2col{grid-template-columns:1fr !important;min-height:auto !important}
+  .ph-2col > div:first-child{padding:48px 24px !important;order:2}
+  .ph-2col > div:last-child{height:58vh;min-height:360px;order:1}
+}
 
 /* ── PILLAR HOVER ── */
 .pillar{background:#FDFCFA;border:1px solid var(--bd);overflow:hidden;transition:transform .35s,box-shadow .35s;cursor:default}
