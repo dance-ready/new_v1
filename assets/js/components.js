@@ -44,20 +44,12 @@
     DRP.heroSlides.forEach(function(s, i){
       var slide = document.createElement('div');
       slide.className = 'hslide' + (i===0 ? ' on' : '');
-      var bg = document.createElement('img');
-      bg.src = s.img;
-      bg.alt = '';
-      bg.className = 'hslide-bg';
-      bg.loading = i === 0 ? 'eager' : 'lazy';
-      bg.onerror = function(){ this.style.display = 'none'; };
-      var fg = document.createElement('img');
-      fg.src = s.img;
-      fg.alt = s.label || '';
-      fg.className = 'hslide-fg';
-      fg.loading = i === 0 ? 'eager' : 'lazy';
-      fg.onerror = function(){ this.style.display = 'none'; };
-      slide.appendChild(bg);
-      slide.appendChild(fg);
+      var img = document.createElement('img');
+      img.src = s.img;
+      img.alt = s.label || '';
+      img.loading = i === 0 ? 'eager' : 'lazy';
+      img.onerror = function(){ this.style.display = 'none'; };
+      slide.appendChild(img);
       stage.appendChild(slide);
     });
     var slides = stage.querySelectorAll('.hslide');
