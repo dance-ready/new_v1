@@ -41,23 +41,23 @@
     var stage = document.getElementById('hero-slides');
     var dotsEl = document.getElementById('hero-dots');
     if(!stage || !DRP.heroSlides) return;
-    var gradients = [
-      'linear-gradient(160deg,#1a1208 0%,#3d2810 60%,#2d1f0e 100%)',
-      'linear-gradient(135deg,#061814 0%,#0d3d2e 50%,#1d9e75 160%)',
-      'linear-gradient(160deg,#06101e 0%,#0e1f3d 50%,#185FA5 170%)',
-      'linear-gradient(135deg,#0f0e0c 0%,#1C1C1A 60%,#2d2820 100%)',
-      'linear-gradient(160deg,#1a0c08 0%,#2d1410 50%,#C8472B 220%)'
-    ];
     DRP.heroSlides.forEach(function(s, i){
       var slide = document.createElement('div');
       slide.className = 'hslide' + (i===0 ? ' on' : '');
-      slide.style.background = gradients[i] || '#1C1C1A';
-      var img = document.createElement('img');
-      img.src = s.img;
-      img.alt = s.label || '';
-      img.loading = i === 0 ? 'eager' : 'lazy';
-      img.onerror = function(){ this.style.display = 'none'; };
-      slide.appendChild(img);
+      var bg = document.createElement('img');
+      bg.src = s.img;
+      bg.alt = '';
+      bg.className = 'hslide-bg';
+      bg.loading = i === 0 ? 'eager' : 'lazy';
+      bg.onerror = function(){ this.style.display = 'none'; };
+      var fg = document.createElement('img');
+      fg.src = s.img;
+      fg.alt = s.label || '';
+      fg.className = 'hslide-fg';
+      fg.loading = i === 0 ? 'eager' : 'lazy';
+      fg.onerror = function(){ this.style.display = 'none'; };
+      slide.appendChild(bg);
+      slide.appendChild(fg);
       stage.appendChild(slide);
     });
     var slides = stage.querySelectorAll('.hslide');
