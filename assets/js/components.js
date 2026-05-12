@@ -323,7 +323,7 @@
     var cEl = document.getElementById('courses');
     if(!cEl || !DRP.courseData) return;
     DRP.courseData.forEach(function(c){
-      var bg = "background:" + c.bg + ", url('" + c.img + "');background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;height:160px";
+      var bg = "background:" + c.bg + ", url('" + c.img + "');background-size:cover;background-position:center top;display:flex;align-items:center;justify-content:center;height:100%";
       var listItems = c.list.map(function(li){
         return '<li style="padding:3px 0;display:flex;gap:7px"><span style="color:var(--ember);flex-shrink:0">—</span>' + esc(li) + '</li>';
       }).join('');
