@@ -86,11 +86,10 @@ window.DRP = (function(){
   };
 
   var heroSlides = [
-    {img:'assets/images/hero-1.jpg',label:'Performance'},
-    {img:'assets/images/hero-2.jpg',label:'Training'},
-    {img:'assets/images/hero-3.jpg',label:'Studio'},
-    {img:'assets/images/hero-4.jpg',label:'Portrait'},
-    {img:'assets/images/hero-5.jpg',label:'Duet'}
+    {img:'assets/images/hero-1.jpg',label:'Performance',pos:'50% 35%'},
+    {img:'assets/images/hero-2.jpg',label:'Training',pos:'50% 25%'},
+    {img:'assets/images/hero-3.jpg',label:'Studio',pos:'50% 22%'},
+    {img:'assets/images/hero-5.jpg',label:'Duet',pos:'50% 30%'}
   ];
 
   return {

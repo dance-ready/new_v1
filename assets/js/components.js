@@ -48,6 +48,7 @@
       img.src = s.img;
       img.alt = s.label || '';
       img.loading = i === 0 ? 'eager' : 'lazy';
+      if(s.pos) img.style.objectPosition = s.pos;
       img.onerror = function(){ this.style.display = 'none'; };
       slide.appendChild(img);
       stage.appendChild(slide);
