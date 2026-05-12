@@ -19,8 +19,9 @@ a{color:inherit;text-decoration:none}
 .nav{background:rgba(253,252,250,.97);border-bottom:1px solid var(--bd);height:56px;display:flex;align-items:center;padding:0 5%;flex-shrink:0;position:sticky;top:0;z-index:50;backdrop-filter:saturate(150%) blur(6px)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;width:100%}
 .logo{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:8px;text-decoration:none}
-.lm{width:30px;height:30px;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s}
-.logo:hover .lm{background:var(--ember)}
+.lm{width:34px;height:34px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .2s}
+.lm img{width:100%;height:100%;object-fit:contain;display:block}
+.logo:hover .lm{transform:scale(1.05)}
 .nl{display:flex;gap:22px;list-style:none}
 .nl a{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--stone);border-bottom:1.5px solid transparent;padding-bottom:2px;font-family:'DM Sans',sans-serif;transition:color .15s;display:inline-block}
 .nl a.on{color:var(--ink);border-bottom-color:var(--ember);font-weight:500}
@@ -94,7 +95,7 @@ h3.ct{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:400;marg
 
 /* ── PAGE HERO ── */
 .ph{position:relative;min-height:62vh;display:flex;align-items:flex-end;overflow:hidden}
-.ph-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(28,28,26,.96) 0%,rgba(28,28,26,.5) 50%,rgba(28,28,26,.12) 100%)}
+.ph-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(28,28,26,.7) 0%,rgba(28,28,26,.22) 55%,rgba(28,28,26,0) 100%)}
 .ph-c{position:relative;z-index:2;padding:40px 6% 52px;width:100%}
 
 /* ── PILLAR HOVER ── */
@@ -267,7 +268,7 @@ a.bu{display:inline-block}
 /* ── Hero slideshow image support ── */
 .hslide img{width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:.55}
 .hslide.gradient img{display:none}
-.ph img.ph-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.42;z-index:0}
+.ph img.ph-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.95;z-index:0}
 .pillar-img-bg{background-size:cover;background-position:center}
 .pillar-img-bg.has-img{position:relative}
 .pillar-img-bg.has-img::after{content:'';position:absolute;inset:0;background:inherit;mix-blend-mode:multiply;opacity:.55}
