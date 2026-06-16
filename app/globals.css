@@ -190,6 +190,29 @@ h1.display {
   color: var(--dk);
   margin-bottom: 20px;
 }
+.hero-main {
+  font-family: var(--font-sans), Arial, sans-serif;
+  font-size: clamp(28px, 3.8vw, 48px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #243447;
+  margin-bottom: 18px;
+}
+.hero-sub {
+  font-family: var(--font-display), Georgia, serif;
+  font-style: italic;
+  font-size: clamp(26px, 3.2vw, 42px);
+  font-weight: 300;
+  line-height: 1.18;
+  color: #3b4a5a;
+  margin-bottom: 22px;
+}
+.hero-sub em {
+  font-style: italic;
+  color: #d6a23a;
+}
 h1.display em,
 h2.section em {
   font-style: italic;
@@ -536,7 +559,7 @@ h3.card-title {
 
 /* CTA band */
 .cta-band {
-  background: var(--dk);
+  background: #5c5b57;
   padding: 68px 5%;
   display: flex;
   align-items: center;
@@ -1149,7 +1172,7 @@ h3.card-title {
 
 /* footer */
 .footer {
-  background: #111110;
+  background: #3a3a37;
   padding: 48px 5% 22px;
 }
 .f-in {
@@ -1159,7 +1182,7 @@ h3.card-title {
   grid-template-columns: 1fr 2fr;
   gap: 48px;
   padding-bottom: 36px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 .f-logo {
   font-family: var(--font-display), Georgia, serif;
@@ -1171,7 +1194,7 @@ h3.card-title {
 }
 .f-tag {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
   line-height: 1.7;
 }
 .f-links {
@@ -1183,7 +1206,7 @@ h3.card-title {
   font-size: 11px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
   background: none;
   border: none;
   cursor: pointer;
@@ -1197,7 +1220,7 @@ h3.card-title {
 }
 .f-copy {
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.7);
   text-align: center;
   padding-top: 20px;
   max-width: 1200px;

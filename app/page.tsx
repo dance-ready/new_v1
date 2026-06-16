@@ -26,10 +26,10 @@ export default function Home() {
       {/* hero */}
       <section className="hero">
         <div className="hero-txt">
-          <p className="ey">Dance Medicine · Performance Science</p>
-          <h1 className="display">
+          <h1 className="hero-main">Dance Medicine Performance Science</h1>
+          <p className="hero-sub">
             Reducing injury risk, <em>elevating</em> performance.
-          </h1>
+          </p>
           <p className="lead" style={{ maxWidth: 420, marginBottom: 38 }}>
             We serve dancers across the lifespan — from students to
             professionals — through research-based education, screening tools,
