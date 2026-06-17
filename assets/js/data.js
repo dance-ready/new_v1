@@ -53,9 +53,9 @@ window.DRP = (function(){
   ];
 
   var affData = [
-    {ini:'KT',name:'KTape MySkin Kinesiotape',desc:'Kinesiotape designed for athletes of all skin tones. Crafted to provide superior performance and visibility on diverse skin.',disc:'25% Off',code:'DRP25',why:'KTape MySkin was designed specifically to show up on darker skin tones — a long-overdue innovation in athletic tape. We use it constantly in clinic and on set.'},
-    {ini:'ION',name:'ION Performance Products',desc:'All-natural performance body care crafted specifically for athletes. Clean ingredients, high performance — designed to support recovery.',disc:'25% Off',code:'DANCEREADY',why:'Clean, effective, and developed for people who push their bodies hard. We recommend ION to every dancer in our care for daily recovery support.'},
-    {ini:'CX',name:'Crosspuncture® Therapy',desc:'Versatile therapy tool for trigger points, tense muscles, and sore joints. Used by practitioners and athletes for targeted relief.',disc:'Special Pricing',code:null,why:'A staple in our clinical toolkit. Crosspuncture® therapy delivers the targeted relief dancers need between sessions — portable and effective.'}
+    {ini:'KT',name:'KTape MySkin Kinesiotape',desc:'Kinesiotape designed for athletes of all skin tones. Crafted to provide superior performance and visibility on diverse skin.',disc:'25% Off',code:'DRP25',why:'KTape MySkin was designed specifically to show up on darker skin tones — a long-overdue innovation in athletic tape. We use it constantly in clinic and on set.',url:'https://mojilitygroup.com/product/k-tape-my-skin/'},
+    {ini:'ION',name:'ION Performance Products',desc:'All-natural performance body care crafted specifically for athletes. Clean ingredients, high performance — designed to support recovery.',disc:'25% Off',code:'DANCEREADY',why:'Clean, effective, and developed for people who push their bodies hard. We recommend ION to every dancer in our care for daily recovery support.',url:'https://www.ionperformancecare.com/shop?aff=DANCEREADY'},
+    {ini:'CX',name:'Crosspuncture® Therapy',desc:'Versatile therapy tool for trigger points, tense muscles, and sore joints. Used by practitioners and athletes for targeted relief.',disc:'Special Pricing',code:null,why:'A staple in our clinical toolkit. Crosspuncture® therapy delivers the targeted relief dancers need between sessions — portable and effective.',url:'https://www.ptstuff.com/product-category/clinical-supplies/dance-ready-project'}
   ];
 
   var bioData = {

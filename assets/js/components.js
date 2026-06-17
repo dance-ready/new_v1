@@ -363,7 +363,7 @@
             '<div class="ev-toggle"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>' +
           '</div>' +
           '<div class="aff-body" id="afb-' + i + '"><div class="aff-inner">' +
-            '<div><p style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--ember);margin-bottom:6px">Why we love it</p><p style="font-size:13px;color:var(--stone);line-height:1.78;font-style:italic;margin-bottom:14px">' + esc(a.why) + '</p><button class="bp" style="font-size:12px">Shop Now →</button></div>' +
+            '<div><p style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--ember);margin-bottom:6px">Why we love it</p><p style="font-size:13px;color:var(--stone);line-height:1.78;font-style:italic;margin-bottom:14px">' + esc(a.why) + '</p><a class="bp" style="font-size:12px" href="' + esc(a.url || '#') + '" target="_blank" rel="noopener">Shop Now →</a></div>' +
             codeHtml +
           '</div></div>' +
         '</div>'
