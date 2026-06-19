@@ -281,7 +281,7 @@ a.bu{display:inline-block}
 .hslide img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:right center;opacity:1}
 .hslide-bg{position:absolute;inset:-8%;background-size:cover;background-position:center;filter:blur(48px) brightness(.55) saturate(1.15);transform:scale(1.08);z-index:0;pointer-events:none}
 .hslide.gradient img{display:none}
-.ph img.ph-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:right center;opacity:.95;z-index:1}
+.ph img.ph-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center center;opacity:.95;z-index:1}
 .ph-bg-blur{position:absolute;inset:-8%;background-size:cover;background-position:center;filter:blur(56px) brightness(.5) saturate(1.18);transform:scale(1.08);z-index:0;pointer-events:none}
 /* Split-stage hero: image is cropped (cover) to the right column; text reads on a dark left panel. Used when source photo is too portrait to fill the hero with contain. */
 .ph.ph-stage .ph-bg-blur{display:none}
