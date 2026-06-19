@@ -476,7 +476,7 @@
     collect();
     if(!targets.length) return;
     var ticking = false;
-    var MAX_SHIFT = 0.18; // 18% upward shift over the hero's scroll travel
+    var MAX_SHIFT = 0.33; // 33% upward shift over the hero's scroll travel
     function update(){
       ticking = false;
       var vh = window.innerHeight;
