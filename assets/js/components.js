@@ -27,6 +27,25 @@
     appendHTML(parent, htmlStr);
   }
 
+  /* ── HERO BACKDROP (page heroes) ──
+     Insert a blurred, dimmed copy of the hero photo as a backdrop so the
+     letterbox area around the contained image reads as an ambient halo
+     rather than a flat black bar. */
+  (function(){
+    var phs = document.querySelectorAll('.ph');
+    phs.forEach(function(ph){
+      var img = ph.querySelector('img.ph-bg');
+      if(!img) return;
+      var src = img.getAttribute('src');
+      if(!src) return;
+      var bg = document.createElement('div');
+      bg.className = 'ph-bg-blur';
+      bg.setAttribute('aria-hidden', 'true');
+      bg.style.backgroundImage = 'url("' + src + '")';
+      ph.insertBefore(bg, ph.firstChild);
+    });
+  })();
+
   /* ── MOBILE NAV ── */
   var navToggle = document.querySelector('.nav-toggle');
   var navList = document.querySelector('.nl');
@@ -44,6 +63,10 @@
     DRP.heroSlides.forEach(function(s, i){
       var slide = document.createElement('div');
       slide.className = 'hslide' + (i===0 ? ' on' : '');
+      var bg = document.createElement('div');
+      bg.className = 'hslide-bg';
+      bg.style.backgroundImage = 'url("' + s.img + '")';
+      slide.appendChild(bg);
       var img = document.createElement('img');
       img.src = s.img;
       img.alt = s.label || '';
