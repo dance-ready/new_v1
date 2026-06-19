@@ -136,7 +136,7 @@
     var ph = document.getElementById('pillars-home');
     if(!ph || !DRP.pillarData) return;
     DRP.pillarData.forEach(function(p){
-      var bg = "background:" + p.bg + ", url('" + p.img + "');background-size:cover;background-position:center;width:100%;height:100%;display:flex;align-items:center;justify-content:center";
+      var bg = "background:" + p.bg + ", url('" + p.img + "') #1c1c1a;background-size:contain;background-repeat:no-repeat;background-position:center;width:100%;height:100%;display:flex;align-items:center;justify-content:center";
       appendHTML(ph,
         '<div class="pillar">' +
           '<div class="pillar-img">' +
