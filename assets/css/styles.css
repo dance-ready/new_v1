@@ -23,7 +23,7 @@ a{color:inherit;text-decoration:none}
 .lm img{width:100%;height:100%;object-fit:contain;display:block}
 .logo:hover .lm{transform:scale(1.05)}
 .nl{display:flex;gap:22px;list-style:none}
-.nl a{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--stone);border-bottom:1.5px solid transparent;padding-bottom:2px;font-family:'DM Sans',sans-serif;transition:color .15s;display:inline-block}
+.nl a{font-size:15px;letter-spacing:.07em;text-transform:uppercase;color:var(--stone);border-bottom:1.5px solid transparent;padding-bottom:2px;font-family:'DM Sans',sans-serif;transition:color .15s;display:inline-block}
 .nl a.on{color:var(--ink);border-bottom-color:var(--ember);font-weight:500}
 .nl a:hover{color:var(--ink)}
 .nc{background:var(--ink);color:#FDFCFA;padding:8px 18px;font-size:12px;font-weight:500;border:none;border-radius:2px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background .2s;white-space:nowrap;display:inline-flex;align-items:center}
@@ -278,9 +278,9 @@ a.bu{display:inline-block}
 
 /* ── Hero slideshow image support ── */
 .hslide{background:#0c0a08}
-.hslide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;opacity:1}
+.hslide img{position:absolute;left:0;right:0;top:0;width:100%;height:120%;object-fit:cover;object-position:center top;opacity:1;will-change:transform}
 .hslide.gradient img{display:none}
-.ph img.ph-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.95;z-index:0}
+.ph img.ph-bg{position:absolute;left:0;right:0;top:0;width:100%;height:120%;object-fit:cover;opacity:.95;z-index:0;will-change:transform}
 .pillar-img-bg{background-size:cover;background-position:center}
 .pillar-img-bg.has-img{position:relative}
 .pillar-img-bg.has-img::after{content:'';position:absolute;inset:0;background:inherit;mix-blend-mode:multiply;opacity:.55}
@@ -295,7 +295,7 @@ a.bu{display:inline-block}
   .nl{display:none;position:absolute;top:56px;left:0;right:0;background:#FDFCFA;border-bottom:1px solid var(--bd);flex-direction:column;gap:0;padding:8px 5% 16px;box-shadow:0 12px 30px rgba(28,28,26,.08)}
   .nl.show{display:flex}
   .nl li{width:100%}
-  .nl a{display:block;padding:10px 0;border-bottom:none;font-size:12px}
+  .nl a{display:block;padding:10px 0;border-bottom:none;font-size:16px}
   .nl a.on{border-bottom-color:transparent;color:var(--ember)}
   .nav-toggle{display:inline-flex}
   .g3{grid-template-columns:1fr}
