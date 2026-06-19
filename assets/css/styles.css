@@ -278,9 +278,9 @@ a.bu{display:inline-block}
 
 /* ── Hero slideshow image support ── */
 .hslide{background:#0c0a08}
-.hslide img{position:absolute;left:0;right:0;top:0;width:100%;height:150%;object-fit:cover;object-position:center top;opacity:1;will-change:transform}
+.hslide img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:right center;opacity:1;background:#0c0a08}
 .hslide.gradient img{display:none}
-.ph img.ph-bg{position:absolute;left:0;right:0;top:0;width:100%;height:150%;object-fit:cover;opacity:.95;z-index:0;will-change:transform}
+.ph img.ph-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:right center;opacity:.95;z-index:0}
 .pillar-img-bg{background-size:cover;background-position:center}
 .pillar-img-bg.has-img{position:relative}
 .pillar-img-bg.has-img::after{content:'';position:absolute;inset:0;background:inherit;mix-blend-mode:multiply;opacity:.55}
