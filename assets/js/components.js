@@ -361,7 +361,7 @@
             '<div style="font-family:\'Cormorant Garamond\',serif;font-size:19px;font-weight:300;margin:8px 0 4px;color:var(--ink)">' + esc(c.t) + '</div>' +
             '<p style="font-size:11px;color:var(--ember);font-style:italic;margin-bottom:8px">' + esc(c.sub) + '</p>' +
             '<div class="course-list"><ul style="list-style:none;font-size:12px;color:var(--stone);padding:0">' + listItems + '</ul></div>' +
-            '<button class="bu" style="margin-top:10px">Notify Me →</button>' +
+            '<a class="bu" style="margin-top:10px" href="https://dancereadyproject.newzenler.com/talk-with-us">Notify Me →</a>' +
           '</div>' +
         '</div>'
       );
