@@ -1,4 +1,12 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/login", "destination": "https://dancereadyproject.newzenler.com/login", "permanent": false },
+    { "source": "/register", "destination": "https://dancereadyproject.newzenler.com/register", "permanent": false },
+    { "source": "/talk-with-us", "destination": "https://dancereadyproject.newzenler.com/talk-with-us", "permanent": false },
+    { "source": "/courses/:path*", "destination": "https://dancereadyproject.newzenler.com/courses/:path*", "permanent": false },
+    { "source": "/live-class/:path*", "destination": "https://dancereadyproject.newzenler.com/live-class/:path*", "permanent": false },
+    { "source": "/live-webinar/:path*", "destination": "https://dancereadyproject.newzenler.com/live-webinar/:path*", "permanent": false }
+  ]
 }
