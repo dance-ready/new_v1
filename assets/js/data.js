@@ -6,9 +6,9 @@ window.DRP = (function(){
   var brands = ['Alvin Ailey','Pivot Dancer','Dance Inst. of Washington','Netflix — Bridgerton','Broadway Productions','Univ. of Maryland','Black Dance Change Makers','Freed of London','Healthy Dancer Summer','Kirov Ballet'];
 
   var pillarData = [
-    {n:'01',t:'Assessment',d:'The Dance Ready Score™ acts as a GPS — pinpointing current fitness and mapping a clear route to peak performance.',detail:'Science-based · No licensure needed · Immediate results',img:'assets/images/pillar-assessment.jpg',bg:'linear-gradient(160deg,rgba(13,32,22,.65),rgba(26,48,32,.65))',page:'assessment.html'},
-    {n:'02',t:'Conditioning',d:'Dansebridge Online — self-paced cross-training designed to build strength, prevent injury, and enhance performance.',detail:'30 min · 5×/week · 6 weeks · Check-in calls',img:'assets/images/pillar-conditioning.jpg',bg:'linear-gradient(160deg,rgba(18,16,14,.6),rgba(26,12,8,.6))',page:'dansebridge.html'},
-    {n:'03',t:'Education',d:'Workshops, webinars, and content equipping dancers and educators with critical knowledge about dancer health.',detail:'Anatomy · Technique · Wellness · Performance science',img:'assets/images/pillar-education.jpg',bg:'linear-gradient(160deg,rgba(14,21,32,.6),rgba(24,95,165,.6))',page:'education.html'}
+    {n:'01',t:'Assessment',d:'The Dance Ready Score™ acts as a GPS — pinpointing current fitness and mapping a clear route to peak performance.',detail:'Science-based · No licensure needed · Immediate results',img:'assets/images/pillar-assessment.jpg',bg:'linear-gradient(160deg,rgba(13,32,22,.28),rgba(26,48,32,.28))',page:'assessment.html'},
+    {n:'02',t:'Conditioning',d:'Dansebridge Online — self-paced cross-training designed to build strength, prevent injury, and enhance performance.',detail:'30 min · 5×/week · 6 weeks · Check-in calls',img:'assets/images/pillar-conditioning.jpg',bg:'linear-gradient(160deg,rgba(18,16,14,.25),rgba(26,12,8,.25))',page:'dansebridge.html'},
+    {n:'03',t:'Education',d:'Workshops, webinars, and content equipping dancers and educators with critical knowledge about dancer health.',detail:'Anatomy · Technique · Wellness · Performance science',img:'assets/images/pillar-education.jpg',bg:'linear-gradient(160deg,rgba(14,21,32,.25),rgba(24,95,165,.25))',page:'education.html'}
   ];
 
   var testis = [
@@ -86,11 +86,10 @@ window.DRP = (function(){
   };
 
   var heroSlides = [
-    {img:'assets/images/hero-1.jpg',label:'Performance'},
-    {img:'assets/images/hero-2.jpg',label:'Training'},
-    {img:'assets/images/hero-3.jpg',label:'Studio'},
-    {img:'assets/images/hero-4.jpg',label:'Portrait'},
-    {img:'assets/images/hero-5.jpg',label:'Duet'}
+    {img:'assets/images/hero-1.jpg',label:'Performance',pos:'50% 35%'},
+    {img:'assets/images/hero-2.jpg',label:'Training',pos:'50% 25%'},
+    {img:'assets/images/hero-3.jpg',label:'Studio',pos:'50% 22%'},
+    {img:'assets/images/hero-5.jpg',label:'Duet',pos:'50% 30%'}
   ];
 
   return {

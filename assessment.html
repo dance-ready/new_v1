@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dance Ready Score™ — Assessment | Dance Ready Project</title>
 <meta name="description" content="The Dance Ready Score is a baseline fitness assessment for dancers — your performance GPS. Science-based, immediate results, no licensure required.">
-<link rel="icon" type="image/png" href="assets/images/logo-dark.png">
+<link rel="icon" type="image/png" href="assets/images/drp-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
 
 <nav class="nav"><div class="nav-in">
   <a class="logo" href="index.html">
-    <span class="lm"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12M3 3l8 8M11 3l-8 8" stroke="#FDFCFA" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+    <span class="lm"><img src="assets/images/drp-logo.png" alt="Dance Ready Project"></span>
     Dance Ready Project
   </a>
   <ul class="nl">
@@ -38,13 +38,15 @@
 
 <main>
 
-  <div class="ph" style="background:linear-gradient(160deg,#0d2016,#1a3020)">
-    <img class="ph-bg" src="assets/images/score-hero.jpg" alt="" onerror="this.style.display='none'">
-    <div class="ph-ov"></div>
-    <div class="ph-c">
-      <p class="ey lt">Baseline Fitness Assessment</p>
-      <h1 class="disp" style="color:#FDFCFA">Dance Ready <em>Score™</em></h1>
-      <p style="font-size:15px;color:rgba(253,252,250,.65);max-width:520px;line-height:1.75">Like all athletes, dancers benefit from knowing their fitness baseline before beginning a training season. The DRS delivers this essential benchmark.</p>
+  <div class="ph" style="min-height:72vh;position:relative;overflow:hidden;display:flex;align-items:center;background:#1c1c1a">
+    <img src="assets/images/assessment-dancer.jpg" alt="Dancer mid-leap on a studio backdrop" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 18%;z-index:0;display:block">
+    <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(to right,rgba(20,20,22,.96) 0%,rgba(20,20,22,.92) 28%,rgba(20,20,22,.55) 45%,rgba(20,20,22,0) 62%);z-index:1;pointer-events:none"></div>
+    <div class="ph-c" style="position:relative;z-index:2;width:100%;max-width:1280px;margin:0 auto;padding:0 clamp(28px,6vw,96px)">
+      <div style="max-width:520px">
+        <p class="ey lt">Baseline Fitness Assessment</p>
+        <h1 class="disp" style="color:#FDFCFA;margin-top:18px">Dance Ready <em>Score™</em></h1>
+        <p style="font-size:15px;color:rgba(253,252,250,.88);line-height:1.75;margin-top:22px">Like all athletes, dancers benefit from knowing their fitness baseline before beginning a training season. The DRS delivers this essential benchmark.</p>
+      </div>
     </div>
   </div>
 
@@ -95,13 +97,40 @@
     </div>
   </div>
 
-  <div class="sec-dk"><div class="wrap">
-    <p class="ey lt">Process</p>
-    <h2 class="sec lt">How it <em>works</em></h2>
-    <div class="g3" style="margin-top:24px;gap:1px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.07)">
-      <div style="padding:28px 24px;position:relative;background:var(--ink)"><div style="font-family:'Cormorant Garamond',serif;font-size:60px;font-weight:300;color:rgba(255,255,255,.07);position:absolute;top:10px;right:14px">01</div><div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:#FDFCFA;margin-bottom:8px">Assessment</div><p style="font-size:13px;color:rgba(253,252,250,.5);line-height:1.75">Quick, non-invasive screening with immediate feedback on performance capacity.</p></div>
-      <div style="padding:28px 24px;position:relative;background:var(--ink)"><div style="font-family:'Cormorant Garamond',serif;font-size:60px;font-weight:300;color:rgba(255,255,255,.07);position:absolute;top:10px;right:14px">02</div><div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:#FDFCFA;margin-bottom:8px">Workshop</div><p style="font-size:13px;color:rgba(253,252,250,.5);line-height:1.75">Review your scores and understand the implications for training and injury risk.</p></div>
-      <div style="padding:28px 24px;position:relative;background:var(--ink)"><div style="font-family:'Cormorant Garamond',serif;font-size:60px;font-weight:300;color:rgba(255,255,255,.07);position:absolute;top:10px;right:14px">03</div><div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:#FDFCFA;margin-bottom:8px">Enhancement</div><p style="font-size:13px;color:rgba(253,252,250,.5);line-height:1.75">Corrective exercise prescriptions tailored to your unique dancer profile.</p></div>
+  <div style="background:var(--cream)"><div class="wrap" style="padding:64px 5%">
+    <p class="ey">Process</p>
+    <h2 class="sec">How it <em>works</em></h2>
+    <div class="g3" style="margin-top:28px;gap:20px">
+      <div style="background:#FDFCFA;border:1px solid var(--bd);overflow:hidden">
+        <div style="height:320px;overflow:hidden;position:relative">
+          <img src="assets/images/assessment-dancer.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block">
+          <div style="position:absolute;top:10px;right:14px;font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:300;color:rgba(255,255,255,.95);line-height:1;text-shadow:0 2px 8px rgba(0,0,0,.45)">01</div>
+        </div>
+        <div style="padding:22px 24px 24px">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:var(--ink);margin-bottom:8px">Assessment</div>
+          <p style="font-size:13px;color:var(--stone);line-height:1.75">Quick, non-invasive screening with immediate feedback on performance capacity.</p>
+        </div>
+      </div>
+      <div style="background:#FDFCFA;border:1px solid var(--bd);overflow:hidden">
+        <div style="height:320px;overflow:hidden;position:relative">
+          <img src="assets/images/process-workshop.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+          <div style="position:absolute;top:10px;right:14px;font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:300;color:rgba(255,255,255,.9);line-height:1;text-shadow:0 2px 8px rgba(0,0,0,.35)">02</div>
+        </div>
+        <div style="padding:22px 24px 24px">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:var(--ink);margin-bottom:8px">Workshop</div>
+          <p style="font-size:13px;color:var(--stone);line-height:1.75">Review your scores and understand the implications for training and injury risk.</p>
+        </div>
+      </div>
+      <div style="background:#FDFCFA;border:1px solid var(--bd);overflow:hidden">
+        <div style="height:320px;overflow:hidden;position:relative">
+          <img src="assets/images/process-enhancement.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+          <div style="position:absolute;top:10px;right:14px;font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:300;color:rgba(255,255,255,.9);line-height:1;text-shadow:0 2px 8px rgba(0,0,0,.35)">03</div>
+        </div>
+        <div style="padding:22px 24px 24px">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:var(--ink);margin-bottom:8px">Enhancement</div>
+          <p style="font-size:13px;color:var(--stone);line-height:1.75">Corrective exercise prescriptions tailored to your unique dancer profile.</p>
+        </div>
+      </div>
     </div>
   </div></div>
 
@@ -130,7 +159,7 @@
   </div>
 </div><p class="f-copy">© 2026 Dance Ready Project. All rights reserved.</p></footer>
 
-<script src="assets/js/data.js"></script>
-<script src="assets/js/components.js"></script>
+<script src="assets/js/data.js?v=5"></script>
+<script src="assets/js/components.js?v=5"></script>
 </body>
 </html>
